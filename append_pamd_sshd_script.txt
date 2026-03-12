@@ -1,0 +1,2 @@
+# telegram_ssh_notification, send telegram notification upon ssh login
+session    optional     pam_exec.so /usr/local/bin/telegram_ssh_notification/telegram_ssh_notification.py

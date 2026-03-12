@@ -1,0 +1,19 @@
+Intro:
+    This code sends out telegram notification when ssh server is logged in
+
+To install:
+
+    1. on telegram open chat with 'BotFather', to create a bot and obtain token
+        enter "/start" to BotFather
+
+    2. enter token to bot_config.json
+
+    3. send any message to the bot, then run setup.py (so it remember who to notify)
+
+    4. run setup2.py with sudo (sudo /usr/bin/python3 setup2.py)
+
+To uninstall
+
+    1. run uninstall.py with (sudo /usr/bin/python3 uninstall.py)
+
+    2. delete this directory
