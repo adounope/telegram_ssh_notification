@@ -40,8 +40,7 @@ def set_ssh_config():
     lines = []
     with open(pamd_ssh_script, 'r') as file:
         lines = file.readlines()
-    print(lines)
-    if lines[-1][-1] != '\n': # change line 
+    if lines[-1][-1] != '\n': # need change line 
         with open(pamd_ssh_script, 'a') as file:
             file.write('\n')
     os.system(f'cat append_pamd_sshd_script.txt >> {pamd_ssh_script}')
