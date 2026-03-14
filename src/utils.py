@@ -16,7 +16,7 @@ def write_config(obj: dict):
 
 tmp_file = 'bot_output.tmp'
 def get_message(TOKEN):
-    os.system(f'curl https://api.telegram.org/{TOKEN}/getUpdates > {tmp_file}')
+    os.system(f'curl https://api.telegram.org/bot{TOKEN}/getUpdates > {tmp_file}')
     message = None
     with open(tmp_file, 'r') as file:
         message =  json.load(file)
@@ -27,7 +27,7 @@ def get_message(TOKEN):
     return message
 
 def send_message(TOKEN, chat_id, message):
-    os.system(f'curl -X POST https://api.telegram.org/{TOKEN}/sendMessage -H \'Content-Type: application/json\' -d \'{{"chat_id": "{chat_id}", "text": "{message}"}}\' > /dev/null')
+    os.system(f'curl -X POST https://api.telegram.org/bot{TOKEN}/sendMessage -H \'Content-Type: application/json\' -d \'{{"chat_id": "{chat_id}", "text": "{message}"}}\' > /dev/null')
 
 
 
