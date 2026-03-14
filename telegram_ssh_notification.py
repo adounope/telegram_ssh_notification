@@ -15,4 +15,4 @@ ip = os.getenv("PAM_RHOST", 'unkown')
 TOKEN = bot_config['TOKEN']
 chat_id = bot_config['chat_id']
 message = f'SSH Login by {user} from {ip}'
-os.system(f'curl -X POST https://api.telegram.org/{TOKEN}/sendMessage -H \'Content-Type: application/json\' -d \'{{"chat_id": "{chat_id}", "text": "{message}"}}\' > /dev/null')
+os.system(f'curl -X POST https://api.telegram.org/bot{TOKEN}/sendMessage -H \'Content-Type: application/json\' -d \'{{"chat_id": "{chat_id}", "text": "{message}"}}\' > /dev/null')
